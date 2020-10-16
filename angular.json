@@ -5,7 +5,11 @@
   "projects": {
     "my-angular-site": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bulma/css/bulma.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +124,15 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-angular-site"
+    }
+  },
+  "defaultProject": "my-angular-site",
+  "cli": {
+    "analytics": false
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
